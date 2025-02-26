@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Sai Vivek</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Boxicons -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --first-color: hsl(224, 89%, 60%);
+            --second-color: hsl(224, 56%, 12%);
+            --font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-family);
+            color: var(--second-color);
+            scroll-behavior: smooth;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .header1 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+            z-index: 100;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .nav__logo {
+            color: var(--second-color);
+            font-weight: 600;
+        }
+
+        .navlist {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav__link {
+            color: var(--second-color);
+            font-weight: 600;
+        }
+
+        .home {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            min-height: 100vh;
+            padding: 5rem 2rem;
+        }
+        .home {
+    display: flex;
+    justify-content: space-between; /* Content on left, image on right */
+    align-items: center;
+    padding: 4rem;
+}
+
+.home__content {
+    max-width: 50%;
+}
+
+.image {
+    width: 300px; /* Adjust size as needed */
+    height: 300px;
+    border-radius: 50%; /* Makes the div circular */
+    overflow: hidden; /* Keeps the image inside the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Optional: Add some shadow for depth */
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fits inside the circle */
+}
+
+
+        .home__title {
+            font-size: 2.1rem;
+            line-height: 1.2;
+        }
+
+        .home__title-color {
+            color: #00eaff;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #00eaff;
+            color: #fff;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
+        }
+
+      
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--second-color);
+            color: #fff;
+        }
+    #some{
+        width:95%;
+        height:3px;
+    }
+   
+        
+
+        .container {
+            max-width: 1000px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--second-color);
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -8px;
+            transform: translateX(-50%);
+            width: 460px;
+            height: 3px;
+            background: #00eaff;
+            border-radius: 2px;
+        }
+
+        .grid1 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 50px;
+        }
+        .card1 {
+            background: linear-gradient(135deg, #f5f7fa, #e6e9ed);
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .card1:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        .logo-placeholder1 img {
+            width: 150px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+        .tech-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: black;
+            font-style: 'times new roman';
+            letter-spacing: 0mm;
+        }
+        hr {
+            width: 50%;
+            margin: 15px auto;
+            border: none;
+            border-top: 1px solid #00eaff;
+        }
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #ffffff, #f9f9f9);
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo-placeholder img {
+            width: 35px;
+            height: 35px;
+            object-fit: contain;
+            margin: 10px;
+        }
+
+        .project-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .project-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: white;
+            background-color: #00eaff;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .project-link:hover {
+            background-color: #00eaff;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .sai {
+            max-width: 990px; /* Increased width */
+            padding: 30px 20px;
+            text-align: center;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+        }
+        .sai:hover {
+            transform: translateY(-10px);
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: row; /* Changed from column to row for better alignment */
+            justify-content: center; /* Centering items horizontally */
+            flex-wrap: wrap; /* Allows items to wrap if needed */
+            gap: 40px; /* Increased gap for better spacing */
+        }
+
+        .contact-links a {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            font-size: 1.0rem;
+            color: black;
+            transition: transform 0.3s ease, color 0.3s ease;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+        .contact-links a:hover {
+            transform: translateY(-8px);
+            color: #00eaff;
+            background: rgba(52, 152, 219, 0.1);
+        }
+
+        .contact-links img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+        .container2 {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        .image-container {
+            width: 290px;
+            height: 300px;
+            border: 5px solid #00eaff;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            width: 100%;
+            border-radius: 15px;
+        }
+        .content h2 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .content h2 span {
+            color: #00eaff;
+        }
+        .content p {
+            line-height: 1.8;
+            max-width: 500px;
+        }
+        .btn3 {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: #00eaff;
+            color: #1e1e2f;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+        .btn3:hover {
+            background: #00c3d4;
+        }
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .timeline-item {
+            border: 2px solid #00eaff;
+            padding: 20px;
+            border-radius: 10px;
+            color: black;
+            
+            background: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        .year {
+            font-weight: bold;
+            color: #00eaff;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header1">
+        <nav class="nav">
+            <a href="#" class="nav__logo">Sai Vivek</a>
+
+            <ul class="navlist">
+                <li><a href="#home" class="nav__link">Home</a></li>
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#education" class="nav__link">Education</a></li>
+                <li><a href="#tech" class="nav__link">Skills</a></li>
+                <li><a href="#project" class="nav__link">Projects</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+     <div id="home"></div>
+    <section class="home" id="home">
+        <div class="home__content">
+            <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Sai Vivek</span><br>Python Full Stack Developer<br><br></h1> 
+            
+            <a href="contact.html" class="button">Contact</a>
+    
+            
+        </div>
+    
+        <!-- Round Image Container -->
+        <div class="image">
+            <img src="saivivek.jpg" alt="Sai Vivek">
+        </div>
+    </section>
+    <div id="about"></div>
+    <hr id="some">
+    <div class="container2">
+        <div class="image-container">
+            <img src="saivivek.jpg" alt="About Me">
+        </div>
+        <div class="content">
+            <h2>About <span>Me</span></h2>
+            <h3>Python Full-Stack Developer!</h3>
+            <p>I am a passionate Python full-stack developer skilled in building dynamic web applications using Django. My projects include a Job Portal, a Library Management System, and a Blog Application. With expertise in HTML, CSS, and JavaScript, I aim to create user-friendly and responsive designs.</p>
+            <p>I have a strong foundation in both frontend and backend development, allowing me to craft seamless user experiences while ensuring robust and scalable server-side functionality. My problem-solving skills and attention to detail help me deliver efficient, high-quality code. I constantly explore new technologies and frameworks to stay updated in the ever-evolving tech landscape.</p>
+            <p>In addition to my technical skills, I am a collaborative team player who enjoys working with others to solve complex challenges. I am dedicated to continuous learning and always strive to enhance my skill set. Whether it's developing new features, debugging complex issues, or optimizing performance, I take pride in delivering solutions that make a difference.</p>
+            <a href="#" class="btn3">Read More</a>
+        </div>
+       
+    </div>
+    <div id="education"></div>
+
+    <hr id="some">
+    <br>
+    <center><h1>Education</h1></center>
+    <div class="timeline">
+        <div class="timeline-item right">
+            <span class="year">2022-24</span>
+            <h3>MCA</h3>
+            <p> I successfully completed my Master of Computer Applications (MCA) at University Post Graduate College, Kakatiya University, Warangal, between 2022 and 2024. During this time, I maintained a CGPA of 7.75 while enhancing my expertise in advanced computing and software development</p>
+        </div>
+        <div class="timeline-item left">
+            <span class="year">2018-20</span>
+            <h3>Degree, BSc</h3>
+            <p>I earned my Bachelor of Science (BSc) degree from Vivekananda Degree & P.G College, Karimnagar, during the period of 2018-2020. My specialization was in Computer Science, and I graduated with a CGPA of 7.93, demonstrating my knowledge and proficiency in the field.</p>
+        </div>
+        <div class="timeline-item right">
+            <span class="year">2018-20</span>
+            <h3>Intermediate, MPC</h3>
+            <p>I pursued my Intermediate education in the Mathematics, Physics, and Chemistry (MPC) stream at Alphores Junior College, Karimnagar, from 2018 to 2020. I secured an impressive percentage of 90.3%, showcasing my commitment to excelling in the science stream.</p>
+        </div>
+        <div class="timeline-item left">
+            <span class="year">2016-17</span>
+            <h3>SSC</h3>
+            <p>I completed my Secondary School Certificate (SSC) from Valmiki Vidyalayam located in Karimnagar during the academic year 2016-17. I achieved a CGPA of 9.5, which reflects my strong academic performance and dedication to my studies.</p>
+        </div>      
+    </div>
+    <div id="tech"></div>
+    <hr id="some">
+    <div class="container">
+        <h1>Technologies Known</h1>
+        <div class="grid1">
+            <div class="card1">
+                <div class="logo-placeholder1">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Logo">
+                </div>
+                <div class="tech-name">Python</div>
+                <hr>
+            </div>
+
+            <div class="card1">
+                <div class="logo-placeholder1">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django Logo">
+                </div>
+                <div class="tech-name">Django</div>
+                <hr>
+            </div>
+
+            <div class="card1">
+                <div class="logo-placeholder1">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML Logo">
+                </div>
+                <div class="tech-name">HTML</div>
+                <hr>
+            </div>
+
+            <div class="card1">
+                <div class="logo-placeholder1">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS Logo">
+                </div>
+                <div class="tech-name">CSS</div>
+                <hr>
+            </div>
+
+            <div class="card1">
+                <div class="logo-placeholder1">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript Logo">
+                </div>
+                <div class="tech-name">JavaScript</div>
+                <hr>
+            </div>
+
+            <div class="card1">
+                <div class="logo-placeholder1">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React JS Logo">
+                </div>
+                <div class="tech-name">React JS</div>
+                <hr>
+            </div>
+
+            <div class="card1">
+                <div class="logo-placeholder1">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap Logo">
+                </div>
+                <div class="tech-name">Bootstrap</div>
+                <hr>
+            </div>
+
+            <div class="card1">
+                <div class="logo-placeholder1">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL Logo">
+                </div>
+                <div class="tech-name">MySQL</div>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <div id="project"></div>
+    <hr id="some">
+   
+    <div class="container">
+        <h1>My Projects</h1>
+        <div class="grid">
+
+            <!-- Job Portal Application -->
+            <div class="card">
+                <div class="project-title">Job Portal Application</div>
+                <p class="project-description">A web-based platform that connects job seekers with employers, featuring job postings, applications, and user authentication. Users can search for jobs by category, location, and apply directly. Employers can manage listings and review applications efficiently.</p>
+                <div class="logo-placeholder">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                </div>
+                <a href="https://github.com/saivivek7881/jobportal-application" class="project-link" target="_blank">View on GitHub</a>
+            </div>
+
+            <!-- Blog Project -->
+            <div class="card">
+                <div class="project-title">Blog Project</div>
+                <p class="project-description">A dynamic blog application allowing users to create, read, update, and delete posts with a modern, responsive interface. Users can comment on posts, share via email, and categorize content for easier navigation.</p>
+                <div class="logo-placeholder">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
+                </div>
+                <a href="https://github.com/yourusername/blog" class="project-link" target="_blank">View on GitHub</a>
+            </div>
+
+            <!-- Library Management -->
+            <div class="card">
+                <div class="project-title">Library Management System</div>
+                <p class="project-description">An advanced system to manage library operations, including book tracking, user management, and interactive dashboards. Features include book check-in/check-out, overdue notifications, and advanced search capabilities.</p>
+                <div class="logo-placeholder">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                </div>
+                <a href="https://github.com/yourusername/library" class="project-link" target="_blank">View on GitHub</a>
+            </div>
+
+             <!-- Restaurant Website -->
+             <div class="card">
+                <div class="project-title">Restaurant Website</div>
+                <p class="project-description">A responsive and user-friendly restaurant website featuring multiple pages for seamless navigation. It includes a homepage showcasing the restaurant’s ambiance, a menu page with detailed food listings, an about page, a contact page with an inquiry form, and a location page with Google Maps integration. Built with HTML and CSS, offering a polished and engaging frontend experience.</p>
+                <div class="logo-placeholder">
+                   
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                    
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
+                 
+                </div>
+                <a href="https://github.com/saivivek7881/restaurant-website" class="project-link" target="_blank">View on GitHub</a>
+            </div>          
+
+            </div>
+            <div id="contact"></div>
+            <hr id="some">
+            
+            <div class="sai">
+               
+                <h1>Contact Me</h1>
+                <div class="contact-links">
+                    <a href="mailto:saivivekgundeti7881@gmail.com" target="_blank">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Gmail"> saivivekgundeti7881@gmail.com
+                    </a>
+                    <a href="https://github.com/saivivek7881" target="_blank">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"> GitHub Profile
+                    </a>
+                    <a href="https://www.linkedin.com/in/saivivekgundeti/" target="_blank">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn"> LinkedIn Profile
+                    </a>
+                    <a href="https://www.instagram.com/_im_vivek_._" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"> Instagram Profile
+                    </a>
+                </div>
+            </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&#169; 2025 Sai Vivek. All rights reserved.</p>
+        
+    </footer>
+
+</body>
+
+</html>
